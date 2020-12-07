@@ -41,6 +41,3 @@ if will_rain:
                      to=to_num
                  )
     print(message.status)
-
-print(f"API Key: {api_key}")
-print(f"auth token: {auth_token}")
