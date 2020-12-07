@@ -12,8 +12,9 @@ account_sid = "AC1940bb58ee26f57f2ed87c48ccf402d6"
 from_num = "+15345444344"
 to_num = "+15206390031"
 
-lat = -17.303680
-lon = 123.630110
+# Tucson, AZ
+lat = 32.291611
+lon = -110.838051
 
 parameters = {
     "lat": lat,
