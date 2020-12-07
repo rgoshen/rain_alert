@@ -1,10 +1,14 @@
 import requests
+import os
 from twilio.rest import Client
 
-api_key = "a1a6485a3a223ab7a2cc4eb56e6d3e3f"
-auth_token = "6d337a795b8bbf578343ff68653ee9e0"
-account_sid = "AC1940bb58ee26f57f2ed87c48ccf402d6"
+# open weather map api
+api_key = os.environ.get("OWM_API_KEY")
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
+
+# twilio api
+auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
+account_sid = "AC1940bb58ee26f57f2ed87c48ccf402d6"
 from_num = "+15345444344"
 to_num = "+15206390031"
 
@@ -37,3 +41,6 @@ if will_rain:
                      to=to_num
                  )
     print(message.status)
+
+print(f"API Key: {api_key}")
+print(f"auth token: {auth_token}")
